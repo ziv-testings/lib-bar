@@ -1,0 +1,76 @@
+{
+  "name": "demo-lib-bar-depbot",
+  "version": "0.0.0",
+  "description": "demo-lib-bar-depbot",
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "tsc",
+    "format": "eslint --fix src/*.ts src/**/*.ts && prettier --write src/**/*.ts src/*.ts",
+    "lint": "eslint src/*.ts",
+    "test": "jest src",
+    "cover": "jest src --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziv-testings/lib-bar.git"
+  },
+  "dependencies": {
+  },
+  "author": "Zoominfo",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "@types/jest": "^25.0.0",
+    "@types/node": "^15.12.2",
+    "@types/redis": "^2.8.29",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.4",
+    "prettier": "^2.2.1",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "root": true,
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "ignorePatterns": [
+      "lib",
+      "src/**/*.spec.ts"
+    ],
+    "rules": {
+      "@typescript-eslint/interface-name-prefix": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-unused-vars": "off"
+    }
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  }
+}

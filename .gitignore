@@ -1,0 +1,11 @@
+node_modules/
+.settings/
+.idea/
+.project
+coverage/
+lib
+src/tmp.ts
+__mocks__/*.js
+__mocks__/*.d.ts
+
+

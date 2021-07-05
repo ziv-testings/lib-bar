@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "es2019",
+      "es2020",
+      "esnext",
+      "dom"
+    ],
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "rootDir": "src",
+    "outDir": "lib",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "target": "es2019",
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "exclude": [
+    "__mocks__",
+    "src/__mocks__/*.ts",
+    "src/**/*.spec.ts"
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs",
+    "exclude": ["src/**/*.spec.ts"],
+    "includes": ["src"]
+  }
+}
